@@ -17,9 +17,9 @@
     <!--定义dubbo注册中心的地址-->
     <dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}"/>
     <!--定义dubbo所在的服务执行时暴露给客户端的端口-->
-    <dubbo:protocol name="dubbo" port="${dubbo.protocol.port}"/>
+    <dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" dispatcher="all"  threadpool="fixed" threads="100"/>
     <!--定义远程服务提供者超时时间-->
-    <dubbo:provider timeout="${dubbo.provider.timeout}"/>
+    <dubbo:provider timeout="${dubbo.provider.timeout}" token="true"/>
     <!--定义dubbo的远程服务端口，这个接口定义的时候需要考虑到一个版本问题-->
     <dubbo:service interface="cn.mldn.remoteapi.IMessage" ref="messageImpl" version="${dubbo.interface.version}"/>
 
