@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/TestDemo/pom.xml" />
         <option value="$PROJECT_DIR$/Service/pom.xml" />
         <option value="$PROJECT_DIR$/Mytest/pom.xml" />
+        <option value="$PROJECT_DIR$/mqconsumer/pom.xml" />
       </list>
     </option>
   </component>
