@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/Service/Service.iml" filepath="$PROJECT_DIR$/Service/Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestDemo/TestDemo.iml" filepath="$PROJECT_DIR$/TestDemo/TestDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mqconsumer/mqconsumer.iml" filepath="$PROJECT_DIR$/mqconsumer/mqconsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mqprovider/mqprovider.iml" filepath="$PROJECT_DIR$/mqprovider/mqprovider.iml" />
     </modules>
   </component>
 </project>

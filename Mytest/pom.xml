@@ -19,7 +19,7 @@
     <dependency>
         <groupId>TestDubbo</groupId>
         <artifactId>Remoteapi</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${remote.api.version}</version>
     </dependency>
     <!--引入dubbo的开发包-->
     <dependency>

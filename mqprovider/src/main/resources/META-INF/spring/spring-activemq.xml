@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!--如果要进行消息操作，需要配置一个消息的连接工厂-->
+    <bean id="targetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="${brokerURL}"/>
+    </bean>
+    <!--现在所有的链接工厂要被spring所管理，所有需要一个spring的链接工厂配置-->
+    <bean id = "connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">
+        <!--此处配置要进行管理的JSM的目标连接工厂-->
+        <property name="targetConnectionFactory" ref="targetConnectionFactory"></property>
+    </bean>
+    <!--定义消息的处理JMS模板-->
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <property name="defaultDestination" ref="queueDestination"></property>
+    </bean>
+    <!--配置本次处理中要使用的队列信息-->
+    <bean id="queueDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg>
+            <value>${mldn.queue.name}</value>
+        </constructor-arg>
+    </bean>
+    <!--&lt;!&ndash;定义消费者处理的jms的操作中容器&ndash;&gt;-->
+    <!--<bean id="jmsContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">-->
+        <!--<property name="connectionFactory" ref="connectionFactory"/>-->
+        <!--<property name="destination" ref="queueDestination"/>-->
+        <!--<property name="messageListener" ref="consumerMessageListener"/>-->
+    <!--</bean>-->
+</beans>
