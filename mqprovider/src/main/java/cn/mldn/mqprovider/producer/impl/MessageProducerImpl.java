@@ -25,6 +25,7 @@ public class MessageProducerImpl implements IMessageProducer{
     private JmsTemplate jmsTemplate;
     @Resource
     private Destination destination;//设置消息目的地
+
     public void sendMessage(String msg) {
         this.jmsTemplate.send(this.destination,new MessageCreator() {
             public Message createMessage(Session session) throws JMSException {

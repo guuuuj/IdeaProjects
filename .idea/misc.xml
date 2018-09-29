@@ -12,6 +12,9 @@
         <option value="$PROJECT_DIR$/Mytest/pom.xml" />
         <option value="$PROJECT_DIR$/mqconsumer/pom.xml" />
         <option value="$PROJECT_DIR$/mqprovider/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot/pom.xml" />
+        <option value="$PROJECT_DIR$/shirodemo/pom.xml" />
+        <option value="$PROJECT_DIR$/shiro-demo/pom.xml" />
       </list>
     </option>
   </component>

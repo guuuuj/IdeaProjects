@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/TestDemo/TestDemo.iml" filepath="$PROJECT_DIR$/TestDemo/TestDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mqconsumer/mqconsumer.iml" filepath="$PROJECT_DIR$/mqconsumer/mqconsumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/mqprovider/mqprovider.iml" filepath="$PROJECT_DIR$/mqprovider/mqprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shiro-demo/shiro-demo.iml" filepath="$PROJECT_DIR$/shiro-demo/shiro-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot/springboot.iml" filepath="$PROJECT_DIR$/springboot/springboot.iml" />
     </modules>
   </component>
 </project>

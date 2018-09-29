@@ -11,6 +11,8 @@
         <module name="Mytest" />
         <module name="Remoteapi" />
         <module name="Service" />
+        <module name="shiro-demo" />
+        <module name="springboot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +21,8 @@
       <module name="Mytest" target="1.5" />
       <module name="Remoteapi" target="1.5" />
       <module name="Service" target="1.5" />
+      <module name="shiro-demo" target="1.5" />
+      <module name="springboot" target="1.5" />
       <module name="TestDemo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
